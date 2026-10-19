@@ -1,4 +1,6 @@
 DevTools:
+
+4:
 URL: http://127.0.0.1:5500/index.html 
 host: 127.0.0.1:5500
 Protocolo: http
@@ -7,9 +9,11 @@ Ruta: /index.html
 Método de la petición: GET
 Código de estado: 304
 
+5:
 URL: URL: http://127.0.0.1:5500/eventos/index.html 
 Codigo: 404 Not Found 1ms, significa que no se encontró la página
 
+6:
 Rol HTML: Es lo que le da la estructura a la pagina, es necesario para definir titulos, textos, imagenes, botones
 Rol CSS: ES lo que da el diseño de la pagina, color, tamaños, fondos
 Rol JavaScritp: Es lo que hace que la pagina tenga interaccón, por ejemplo que los botones tengan funcionalidad
