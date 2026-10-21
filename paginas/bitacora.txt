@@ -1,7 +1,0 @@
-|origen      |                      Destino                     | Ruta escrita | 
-/index.html                   /paginas/tarifas.html          /paginas/tarifas.html           
-/index.html                   /paginas/reservas.html         /paginas/reservas.html
-/paginas/tarifas.html         /index.html                    /index.html
-/paginas/tarifas.html         /paginas/reservas.html         /paginas/reservas.html
-/paginas/reservas.html        /index.html                    /index.html
-/paginas/reservas.html        /paginas/tarifas.html          /paginas/tarifas.html
