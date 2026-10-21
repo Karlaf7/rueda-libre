@@ -27,3 +27,43 @@ Punto 6 del reto 4:
 /paginas/tarifas.html         /paginas/reservas.html         /paginas/reservas.html
 /paginas/reservas.html        /index.html                    /index.html
 /paginas/reservas.html        /paginas/tarifas.html          /paginas/tarifas.html
+
+
+
+Esquema de regiones:
+
+index:
+
+<header>
+<nav></nav>
+</header>
+<main>
+<section></section>
+<article></article>
+</main>
+<aside></aside>
+<footer></footer>
+
+tarifas:
+
+<header>
+<nav></nav>
+</header>
+<main>
+<section></section>
+<article></article>
+</main>
+<aside></aside>
+<footer></footer>
+
+reservas:
+
+<header>
+<nav></nav>
+</header>
+<main>
+<section></section>
+<article></article>
+</main>
+<aside></aside>
+<footer></footer>
