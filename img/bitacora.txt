@@ -38,10 +38,14 @@ index:
 <nav></nav>
 </header>
 <main>
+<header></header>
 <section></section>
 <article></article>
-</main>
+<article></article>
+<article></article>
+<section></section>
 <aside></aside>
+</main>
 <footer></footer>
 
 tarifas:
@@ -51,9 +55,10 @@ tarifas:
 </header>
 <main>
 <section></section>
-<article></article>
-</main>
+<section></section>
 <aside></aside>
+<section></section>
+</main>
 <footer></footer>
 
 reservas:
@@ -62,8 +67,6 @@ reservas:
 <nav></nav>
 </header>
 <main>
-<section></section>
-<article></article>
-</main>
 <aside></aside>
+</main>
 <footer></footer>
