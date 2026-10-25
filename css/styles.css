@@ -24,3 +24,74 @@ body {
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--fuente-titulos);
 }
+
+#menu {
+  list-style: none;
+  display: flex;
+  gap: var(--espacio-m);
+  padding: 0;
+}
+
+#menu a {
+  color: var(--gris-asfalto);
+  text-decoration: none;
+  padding: var(--espacio-s) var(--espacio-m);
+  border-bottom: 3px solid transparent;
+}
+
+#menu a:hover,
+#menu a:focus {
+  color: var(--azul-noche);
+  border-bottom-color: var(--verde-ruta);
+}
+
+#menu a:focus {
+  outline: 3px solid var(--azul-noche);
+  outline-offset: 2px;
+}
+
+#menu a.activo {
+  color: var(--verde-ruta);
+  font-weight: 600;
+  border-bottom-color: var(--verde-ruta);
+}
+
+.boton-cta {
+  display: inline-block;
+  background-color: var(--verde-ruta);
+  color: var(--blanco);
+  padding: var(--espacio-s) var(--espacio-l);
+  border-radius: 0.5rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.boton-cta:hover {
+  background-color: var(--azul-noche);
+}
+
+.boton-cta:focus {
+  outline: 3px solid var(--azul-noche);
+  outline-offset: 3px;
+}
+
+input,
+select,
+textarea {
+  font-family: inherit;
+  border: 2px solid var(--gris-asfalto);
+}
+
+input:hover,
+select:hover,
+textarea:hover {
+  border-color: var(--verde-ruta);
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+  outline: 3px solid var(--azul-noche);
+  outline-offset: 2px;
+}

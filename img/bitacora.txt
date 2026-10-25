@@ -194,3 +194,13 @@ En DevTools revisé un párrafo de mi index.html.
 La propiedad font-family sí se hereda: el párrafo no la tiene escrita, pero en Computed aparece Open Sans, que puse en el body. 
 En cambio, margin no se hereda: el párrafo tiene 16px de margen que vienen del navegador, no del body.
 
+
+Abrí DevTools en el enlace de la página actual, que tiene la clase activo, y vi en Styles que el color de .activo salía tachado.
+El que ganaba era el de #menu a, por eso el enlace se veía gris y no verde. El font-weight: 600 sí se aplicaba porque #menu a no lo define.
+
+Especificidad de cada selector:
+#menu a = (1, 0, 1), porque tiene 1 id y 1 elemento.
+.activo = (0, 1, 0), porque tiene 1 clase.
+
+Causa: las dos reglas cambian el color del mismo enlace y el navegador se queda con la de mayor especificidad.
+Un id pesa más que una clase, así que #menu a gana aunque .activo esté escrita después en el archivo.
