@@ -131,6 +131,54 @@ Resultado esperado: rechazado, debe marcar casilla
 Resultado obtenido: marca esta casilla si desea continuar
 
 
+Hallazgos:
+
+1. El idioma del documento lo tenia en ingles y los corregi a español.
+2. En la pagina reservas, me faltaba un meta name description, y le quite el br para separar
+3. Movi la imagen del logo, para dentro de header, la tenia fuera del logo
+
+Tabla de contraste:
+
+1.Combinacion texto sobre fondo:  Blanco sobre Verde Ruta
+Relacion: 5.31:1
+Clasificacion: apta para texto normal
+
+2.Combinacion texto sobre fondo:  Blanco sobre Naranja Pedal
+Relacion: 2.21:1
+Clasificacion: no apta
+
+3.Combinacion texto sobre fondo:  Azul Noche sobre Naranja Pedal
+Relacion: 7.2 :1
+Clasificacion: apta para texto normal
 
 
+4.Combinacion texto sobre fondo:  Azul Noche sobre Crema
+Relacion: 14.82:1
+Clasificacion: apta para texto normal
 
+
+5.Combinacion texto sobre fondo: Gris Asfalto sobre Crema
+Relacion: 5.56:1
+Clasificacion: apta para texto normal
+
+6.Combinacion texto sobre fondo:  Verde Ruta sobre Crema
+Relacion: 4.93:1
+Clasificacion: apta para texto normal
+
+7.Combinacion texto sobre fondo:  Naranja Pedal sobre Crema
+Relacion: 2.05:1
+Clasificacion: no apta
+
+8.Combinacion texto sobre fondo: Blanco sobre Azul Noche
+Relacion: 15.97:1
+Clasificacion: apta para texto normal
+
+
+Mapa de uso de color:
+Texto principal y títulos:	Azul Noche sobre Crema, relacion: 14.82:1
+Texto secundario: Gris Asfalto sobre Crema, relacion: 5.56:1
+Fondo general: Crema, base de las mediciones
+Encabezado: Fondo Azul Noche, texto blanco, relacion: 15.97:1
+Botones principales: Fondo Verde Ruta, texto blanco, relacion: 5.31:1
+Botones secundarios y destacados: Fondo Naranja Pedal, texto Azul Noche, relacion: 7.2:1
+Enlaces: Verde Ruta sobre Crema, subrayados, relacion: 4.93:1
