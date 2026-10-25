@@ -186,3 +186,11 @@ Botones secundarios y destacados: Fondo Naranja Pedal, texto Azul Noche, relacio
 Enlaces: Verde Ruta sobre Crema, subrayados, relacion: 4.93:1
 
 Enlace: https://karlaf7.github.io/rueda-libre/
+
+
+Comprobación de herencia en DevTools:
+
+En DevTools revisé un párrafo de mi index.html. 
+La propiedad font-family sí se hereda: el párrafo no la tiene escrita, pero en Computed aparece Open Sans, que puse en el body. 
+En cambio, margin no se hereda: el párrafo tiene 16px de margen que vienen del navegador, no del body.
+
