@@ -25,6 +25,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: var(--fuente-titulos);
 }
 
+
 #menu {
   list-style: none;
   display: flex;
@@ -45,35 +46,30 @@ h1, h2, h3, h4, h5, h6 {
   border-bottom-color: var(--verde-ruta);
 }
 
-#menu a:focus {
-  outline: 3px solid var(--azul-noche);
-  outline-offset: 2px;
-}
-
 #menu a.activo {
   color: var(--verde-ruta);
   font-weight: 600;
   border-bottom-color: var(--verde-ruta);
 }
 
-.boton-cta {
+.boton-cta,
+button {
   display: inline-block;
   background-color: var(--verde-ruta);
   color: var(--blanco);
   padding: var(--espacio-s) var(--espacio-l);
+  border: none;
   border-radius: 0.5rem;
+  font-family: inherit;
   font-weight: 600;
   text-decoration: none;
 }
 
-.boton-cta:hover {
+.boton-cta:hover,
+button:hover {
   background-color: var(--azul-noche);
 }
 
-.boton-cta:focus {
-  outline: 3px solid var(--azul-noche);
-  outline-offset: 3px;
-}
 
 input,
 select,
@@ -88,24 +84,95 @@ textarea:hover {
   border-color: var(--verde-ruta);
 }
 
+#menu a:focus,
+.boton-cta:focus,
+button:focus,
 input:focus,
 select:focus,
-textarea:focus,
-button:focus {
+textarea:focus {
   outline: 3px solid var(--azul-noche);
   outline-offset: 2px;
 }
 
-button {
-  background-color: var(--verde-ruta);
-  color: var(--blanco);
-  border: none;
-  padding: var(--espacio-s) var(--espacio-l);
-  border-radius: 0.5rem;
-  font-family: inherit;
-  font-weight: 600;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
-button:hover {
+main {
+  max-width: 60rem;
+  margin: 0 auto;
+  padding: var(--espacio-m);
+}
+
+.portada {
+  min-height: 20vh;
+}
+
+.tarjeta {
+  padding: var(--espacio-m);
+  border: 1px solid var(--gris-asfalto);
+  border-radius: 0.5rem;
+  margin-bottom: var(--espacio-l);
+}
+
+.tarjeta img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 15rem;
+  object-fit: contain;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: var(--espacio-l);
+}
+
+th,
+td {
+  padding: var(--espacio-s) var(--espacio-m);
+  border: 1px solid var(--gris-asfalto);
+  text-align: left;
+}
+
+th {
   background-color: var(--azul-noche);
+  color: var(--blanco);
+}
+
+
+fieldset {
+  margin-bottom: var(--espacio-l);
+  padding: var(--espacio-m);
+}
+
+form p {
+  margin-bottom: var(--espacio-m);
+}
+
+label {
+  display: block;
+  margin-bottom: var(--espacio-s);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+input[type="number"],
+select,
+textarea {
+  width: 100%;
+  padding: var(--espacio-s);
+}
+
+button {
+  padding: var(--espacio-m) var(--espacio-xl);
+}
+
+a {
+  color: var(--verde-ruta);
 }

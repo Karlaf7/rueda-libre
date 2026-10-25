@@ -204,3 +204,10 @@ Especificidad de cada selector:
 
 Causa: las dos reglas cambian el color del mismo enlace y el navegador se queda con la de mayor especificidad.
 Un id pesa más que una clase, así que #menu a gana aunque .activo esté escrita después en el archivo.
+
+
+Ancho total de una tarjeta antes y después de cambiar box-sizing:
+Medí el ancho de una tarjeta en Computed con width: 20rem (320px). Con content-box, 
+el contenido medía 320px y el ancho total era 354px (320 + 32 de relleno + 2 de borde), es decir, 
+la tarjeta se hacía más ancha que lo declarado. Con border-box, el ancho total fue 320px y el contenido se redujo a 286px, 
+porque el ancho ya incluye relleno y borde.
