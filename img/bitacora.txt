@@ -76,3 +76,61 @@ Justificacion de controles del formulario:
 Numero de documento: input type="text", elegí este campo, porque este dato no es una cantidad numerica sino un identificador, puede tener letras.
 Tipo de plan y recorrido: select, use lista despegable, porque el cliente debe elegir una sola opcion entre varias.
 Aceptación de políticas: input type="checkbox" con required, utilicé una casilla porque la aceptación de las políticas es una respuesta de sí o no, se acepta o no se acepta. Al añadir el atributo required, se impide enviar el formulario si la casilla no está marcada, para asegurar que el cliente acepto las politicas antes de reservar
+
+
+Pruebas:
+
+Prueba 1:
+Campo: Nombre
+Dato de prueba: an
+Resultado esperado: rechazado, minimo 3 caracteres
+Resultado obtenido: prolonga este texto a 3 caracteres o mas (en este momento tiene 2 caracteres)
+
+Prueba 2:
+Campo: Documento
+Dato de prueba: 12345
+Resultado esperado: rechazado, menos de 6 digitos
+Resultado obtenido: Busque la coincidencia con el formato solicitado. Escribe solo numeros entre 6 y 10 digitos
+
+Prueba 3:
+Campo: Documento
+Dato de prueba: abc123
+Resultado esperado: rechazado, solo números (muestra el title)
+Resultado obtenido: Busque la coincidencia con el formato solicitado. Escribe solo numeros entre 6 y 10 digitos, sin puntos ni espacios.
+
+Prueba 4:
+Campo: Correo
+Dato de prueba: andrea@
+Resultado esperado: rechazado, fromato de correo invalido
+Resultado obtenido: escribe una parte despues del @. andrea@ esta incompleto
+
+
+Prueba 5:
+Campo: Celular
+Dato de prueba: 2134543245 
+Resultado esperado: rechazado, no empieza por 3 (muestra el title)
+Resultado obtenido: Busque la coincidencia con el formato solicitado. 10 digitos y debe empezar por 3
+
+Prueba 6:
+Campo: Cantidad de bicicletas
+Dato de prueba: 7
+Resultado esperado: rechazado, maximo 6
+Resultado obtenido: El valor debe ser menor o igual que 6
+
+Prueba 7:
+Campo: Plan
+Dato de prueba: Sin seleccionar
+Resultado esperado: rechazado, campo obligatorio
+Resultado obtenido: Seleccione un elemento de la lista
+
+
+Prueba 8:
+Campo: Politicas
+Dato de prueba: Sin seleccionar
+Resultado esperado: rechazado, debe marcar casilla
+Resultado obtenido: marca esta casilla si desea continuar
+
+
+
+
+

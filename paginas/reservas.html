@@ -31,94 +31,117 @@
                 <dd>6:00 a.m a 2:00 p.m</dd>
             </dl>
         </aside>
+
         <section>
             <h2>Formulario de reservas</h2>
             <form action="#" method="post">
 
                 <fieldset>
-                <legend>Tus datos</legend>
-                <p>
-                    <label for="nombre">Nombre completo</label>
-                    <input type="text" id="nombre" name="nombre">
-                </p>
-                <p>
-                    <label for="documento">Número de documento</label>
-                    <input type="text" id="documento" name="documento">
-                </p>
-                <p>
-                    <label for="correo">Correo electrónico</label>
-                    <input type="email" id="correo" name="correo">
-                </p>
-                <p>
-                    <label for="telefono">Celular</label>
-                    <input type="tel" id="telefono" name="telefono">
-                </p>
+
+                    <legend>Tus datos</legend>
+
+                    <p>
+                        <label for="nombre">Nombre completo</label>
+                        <input type="text" id="nombre" name="nombre" required minlength="3">
+                    </p>
+
+                    <p>
+                        <label for="documento">Número de documento</label>
+                        <input type="text" id="documento" name="documento" required pattern="[0-9]{6,10}"
+                        title="Escribe solo números, entre 6 y 10 dígitos, sin puntos ni espacios">
+                    </p>
+
+                    <p>
+                        <label for="correo">Correo electrónico</label>
+                        <input type="email" id="correo" name="correo" required>
+                    </p>
+
+                    <p>
+                        <label for="telefono">Celular</label>
+                        <input type="tel" id="telefono" name="telefono" required pattern="3[0-9]{9}"
+                        title="10 dígitos y debe empezar por 3">
+                    </p>
+
                 </fieldset>
 
                 <fieldset>
+
                     <legend>Tu alquiler</legend>
-                <p>
-                    <label for="fecha-alquiler">Fecha de alquiler</label>
-                    <input type="date" id="fecha-alquiler" name="fecha-alquiler">
-                </p>
 
-                <p>Tipo de bicicleta:</p>
-                <p>
-                    <label for="urbana">
-                    <input type="radio" id="urbana" name="bicicleta" value="urbana">
-                    Urbana
-                    </label>
-                </p>
-                <p>
-                    <label for="montana">
-                    <input type="radio" id="montana" name="bicicleta" value="montana">
-                    Montaña
-                    </label>
-                </p>
-                <p>
-                    <label for="electrica">
-                    <input type="radio" id="electrica" name="bicicleta" value="electrica">
-                    Eléctrica
-                    </label>
-                </p>
+                    <p>
+                        <label for="fecha-alquiler">Fecha de alquiler</label>
+                        <input type="date" id="fecha-alquiler" name="fecha-alquiler" required min="2026-11-01" max="2026-12-31">
+                    </p>
+                    
+                    <fieldset>
 
-                <p>
-                    <label for="plan">Plan:</label>
-                    <select id="plan" name="plan">
-                        <option value="1-hora">1 hora</option>
-                        <option value="medio-dia">Medio dia</option>
-                        <option value="dia-completo">Dia completo</option>
-                    </select>
-                </p>
-                <p>
-                    <label for="cantidad">Cantidad de bicicletas</label>
-                    <input type="number" id="cantidad" name="cantidad" min="1" value="1">
-                </p>
-                <p>
-                    <label for="recorrido">Recorrido guiado:</label>
-                    <select id="recorrido" name="recorrido">
-                        <option value="rio-y-parques">Rio y parques</option>
-                        <option value="sabores-de-barrio">Sabores de barrio</option>
-                        <option value="reto-las-palmas">Reto las palmas</option>
-                    </select>
-                </p>
+                        <legend>Tipo de bicicleta</legend>
+
+                        <p>
+                            <label for="urbana">
+                            <input type="radio" id="urbana" name="bicicleta" value="urbana" required>
+                            Urbana
+                            </label>
+                        </p>
+
+                        <p>
+                            <label for="montana">
+                            <input type="radio" id="montana" name="bicicleta" value="montana" required>
+                            Montaña
+                            </label>
+                        </p>
+
+                        <p>
+                            <label for="electrica">
+                            <input type="radio" id="electrica" name="bicicleta" value="electrica" required>
+                            Eléctrica
+                            </label>
+                        </p>
+                    </fieldset>
+
+                    <p>
+                        <label for="plan">Plan:</label>
+                        <select id="plan" name="plan" required>
+                            <option value="">Selecciona un plan</option>
+                            <option value="1-hora">1 hora</option>
+                            <option value="medio-dia">Medio dia</option>
+                            <option value="dia-completo">Dia completo</option>
+                        </select>
+                    </p>
+
+                    <p>
+                        <label for="cantidad">Cantidad de bicicletas</label>
+                        <input type="number" id="cantidad" name="cantidad" required min="1" max="6" value="1">
+                    </p>
+
+                    <p>
+                        <label for="recorrido">Recorrido guiado:</label>
+                        <select id="recorrido" name="recorrido">
+                            <option value="rio-y-parques">Rio y parques</option>
+                            <option value="sabores-de-barrio">Sabores de barrio</option>
+                            <option value="reto-las-palmas">Reto las palmas</option>
+                        </select>
+
+                    </p>
                 </fieldset>
 
                 <fieldset>
                     <legend>Confirmación</legend>
-                <p>
-                    <label for="comentarios">Comentarios</label>
-                    <textarea id="comentarios" name="comentarios" rows="4" maxlength="300"></textarea>
-                </p>
-                <p>
-                    <label>
-                        <input type="checkbox" name="politicas" required>
-                        Acepto las politicas de alquiler
-                    </label>
-                </p>
-                <p>
-                    <button type="submit">Reservar</button>
-                </p>
+                    <p>
+                        <label for="comentarios">Comentarios</label>
+                        <textarea id="comentarios" name="comentarios" rows="4" maxlength="300"></textarea>
+                    </p>
+
+                    <p>
+                        <label>
+                            <input type="checkbox" name="politicas" required>
+                            Acepto las politicas de alquiler
+                        </label>
+                    </p>
+
+                    <p>
+                        <button type="submit">Reservar</button>
+                    </p>
                 </fieldset>
             </form>
         </section>
