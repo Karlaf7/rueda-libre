@@ -136,6 +136,8 @@ Hallazgos:
 1. El idioma del documento lo tenia en ingles y los corregi a español.
 2. En la pagina reservas, me faltaba un meta name description, y le quite el br para separar
 3. Movi la imagen del logo, para dentro de header, la tenia fuera del logo
+4. tarifas.html	Rutas absolutas (/index.html, /paginas/reservas.html) que daban 404 en GitHub Pages	Las cambié a relativas (../index.html, reservas.html)
+
 
 Tabla de contraste:
 
