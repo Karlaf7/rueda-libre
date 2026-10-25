@@ -95,3 +95,17 @@ button:focus {
   outline: 3px solid var(--azul-noche);
   outline-offset: 2px;
 }
+
+button {
+  background-color: var(--verde-ruta);
+  color: var(--blanco);
+  border: none;
+  padding: var(--espacio-s) var(--espacio-l);
+  border-radius: 0.5rem;
+  font-family: inherit;
+  font-weight: 600;
+}
+
+button:hover {
+  background-color: var(--azul-noche);
+}
