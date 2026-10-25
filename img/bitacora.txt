@@ -70,3 +70,9 @@ reservas:
 <aside></aside>
 </main>
 <footer></footer>
+
+Justificacion de controles del formulario:
+
+Numero de documento: input type="text", elegí este campo, porque este dato no es una cantidad numerica sino un identificador, puede tener letras.
+Tipo de plan y recorrido: select, use lista despegable, porque el cliente debe elegir una sola opcion entre varias.
+Aceptación de políticas: input type="checkbox" con required, utilicé una casilla porque la aceptación de las políticas es una respuesta de sí o no, se acepta o no se acepta. Al añadir el atributo required, se impide enviar el formulario si la casilla no está marcada, para asegurar que el cliente acepto las politicas antes de reservar
