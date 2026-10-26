@@ -1,4 +1,20 @@
+  /*
+   RUEDA LIBRE · styles.css v1.0
+   Secciones:
+   1. Variables
+   2. Base
+   3. Encabezado y navegación
+   4. Componentes (portada, tarjetas, etiqueta, botones)
+   5. Tablas
+   6. Formulario
+   7. Pie y botón de WhatsApp
+   8. Accesibilidad (foco con teclado)
+  */
+
+
+/* 1. VARIABLES*/
 :root {
+  /* Colores */
   --verde-ruta: #1E7A4F;
   --naranja-pedal: #F39A2B;
   --azul-noche: #14213D;
@@ -6,13 +22,24 @@
   --gris-asfalto: #5B6470;
   --blanco: #FFFFFF;
 
+  /* Tipografías */
   --fuente-titulos: "Montserrat", Arial, sans-serif;
   --fuente-texto: "Open Sans", Arial, sans-serif;
 
+  /* Espaciado */
   --espacio-s: 0.5rem;
   --espacio-m: 1rem;
   --espacio-l: 2rem;
   --espacio-xl: 3rem;
+}
+
+
+/* 2. BASE*/
+/* El padding y el borde se incluyen dentro del ancho de cada elemento */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
 body {
@@ -25,7 +52,21 @@ h1, h2, h3, h4, h5, h6 {
   font-family: var(--fuente-titulos);
 }
 
+a {
+  color: var(--verde-ruta);
+}
 
+/* Encabezado, contenido y pie comparten el mismo ancho y centrado */
+header,
+main,
+footer {
+  max-width: 60rem;
+  margin: 0 auto;
+  padding: var(--espacio-m);
+}
+
+
+/*3. ENCABEZADO Y NAVEGACIÓN */
 #menu {
   list-style: none;
   display: flex;
@@ -46,12 +87,53 @@ h1, h2, h3, h4, h5, h6 {
   border-bottom-color: var(--verde-ruta);
 }
 
+/* Página actual */
 #menu a.activo {
   color: var(--verde-ruta);
   font-weight: 600;
   border-bottom-color: var(--verde-ruta);
 }
 
+
+/*4. COMPONENTES */
+
+/* Portada */
+.portada {
+  min-height: 20vh;
+}
+
+/* Tarjeta: es el punto de referencia para la etiqueta "Nuevo" */
+.tarjeta {
+  position: relative;
+  padding: var(--espacio-m);
+  border: 1px solid var(--gris-asfalto);
+  border-radius: 0.5rem;
+  margin-bottom: var(--espacio-l);
+}
+
+.tarjeta img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 15rem;
+  object-fit: contain;
+}
+
+/* Etiqueta "Nuevo": anclada a la esquina superior derecha de la tarjeta,
+   fuera del flujo, así no desplaza el contenido */
+.etiqueta-nuevo {
+  position: absolute;
+  top: var(--espacio-s);
+  right: var(--espacio-s);
+  background-color: var(--naranja-pedal);
+  color: var(--azul-noche);
+  font-family: var(--fuente-titulos);
+  font-size: 0.8rem;
+  padding: 0.25rem var(--espacio-s);
+  border-radius: 0.25rem;
+}
+
+/* Botones */
 .boton-cta,
 button {
   display: inline-block;
@@ -70,61 +152,13 @@ button:hover {
   background-color: var(--azul-noche);
 }
 
-
-input,
-select,
-textarea {
-  font-family: inherit;
-  border: 2px solid var(--gris-asfalto);
+/* El botón del formulario es más grande que el enlace "Reservar ahora" */
+button {
+  padding: var(--espacio-m) var(--espacio-xl);
 }
 
-input:hover,
-select:hover,
-textarea:hover {
-  border-color: var(--verde-ruta);
-}
 
-#menu a:focus,
-.boton-cta:focus,
-button:focus,
-input:focus,
-select:focus,
-textarea:focus {
-  outline: 3px solid var(--azul-noche);
-  outline-offset: 2px;
-}
-
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-main {
-  max-width: 60rem;
-  margin: 0 auto;
-  padding: var(--espacio-m);
-}
-
-.portada {
-  min-height: 20vh;
-}
-
-.tarjeta {
-  padding: var(--espacio-m);
-  border: 1px solid var(--gris-asfalto);
-  border-radius: 0.5rem;
-  margin-bottom: var(--espacio-l);
-}
-
-.tarjeta img {
-  display: block;
-  width: 100%;
-  height: auto;
-  max-height: 15rem;
-  object-fit: contain;
-}
-
+/* 5. TABLAS */
 table {
   width: 100%;
   border-collapse: collapse;
@@ -144,6 +178,7 @@ th {
 }
 
 
+/*6. FORMULARIO */
 fieldset {
   margin-bottom: var(--espacio-l);
   padding: var(--espacio-m);
@@ -158,6 +193,21 @@ label {
   margin-bottom: var(--espacio-s);
 }
 
+/* Estilo común de los campos */
+input,
+select,
+textarea {
+  font-family: inherit;
+  border: 2px solid var(--gris-asfalto);
+}
+
+input:hover,
+select:hover,
+textarea:hover {
+  border-color: var(--verde-ruta);
+}
+
+/* Campos de ancho completo */
 input[type="text"],
 input[type="email"],
 input[type="tel"],
@@ -169,10 +219,43 @@ textarea {
   padding: var(--espacio-s);
 }
 
-button {
-  padding: var(--espacio-m) var(--espacio-xl);
+
+/* 7. PIE Y BOTÓN DE WHATSAPP */
+/* Espacio extra abajo para que el botón fijo no tape el pie
+   (el ancho y el centrado vienen de la regla de la sección 2) */
+footer {
+  padding-bottom: 5rem;
 }
 
-a {
-  color: var(--verde-ruta);
+/* Botón fijo en la esquina inferior derecha, visible al hacer scroll */
+.whatsapp-fijo {
+  position: fixed;
+  right: var(--espacio-m);
+  bottom: var(--espacio-m);
+  z-index: 100;
+  background-color: #128C4A;
+  color: var(--blanco);
+  font-weight: 600;
+  text-decoration: none;
+  padding: var(--espacio-s) var(--espacio-m);
+  border-radius: 2rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.whatsapp-fijo:hover {
+  background-color: var(--azul-noche);
+}
+
+
+/* 8. ACCESIBILIDAD (FOCO CON TECLADO) */
+/* Contorno visible al navegar con Tab */
+#menu a:focus,
+.boton-cta:focus,
+button:focus,
+input:focus,
+select:focus,
+textarea:focus,
+.whatsapp-fijo:focus {
+  outline: 3px solid var(--azul-noche);
+  outline-offset: 2px;
 }

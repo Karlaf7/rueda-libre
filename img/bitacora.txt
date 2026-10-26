@@ -211,3 +211,10 @@ Medí el ancho de una tarjeta en Computed con width: 20rem (320px). Con content-
 el contenido medía 320px y el ancho total era 354px (320 + 32 de relleno + 2 de borde), es decir, 
 la tarjeta se hacía más ancha que lo declarado. Con border-box, el ancho total fue 320px y el contenido se redujo a 286px, 
 porque el ancho ya incluye relleno y borde.
+
+
+Resumen:
+En esta semana construí el sitio web de Rueda Libre, un negocio de alquiler de bicicletas en Medellín, con tres páginas: 
+inicio, tarifas y reservas. Primero armé la estructura en HTML con etiquetas semánticas, imágenes, listas, tablas de precios y un formulario con validaciones. Luego le di estilo con CSS usando variables para los colores y las fuentes, además de un menú con estados de hover y foco. 
+En el último reto usé position para poner la etiqueta “Nuevo” en la tarjeta de bicicletas eléctricas y un botón de WhatsApp fijo en la esquina inferior derecha, y organicé el styles.css por secciones con comentarios. También revisé el sitio con DevTools para buscar errores y probé el teclado, y al final publiqué la versión 1.0 en GitHub Pages. 
+Lo que mejoraría es hacer la página adaptable para celulares, conectar el formulario para que envíe las reservas de verdad, revisar los precios con el cliente y poner el número real de WhatsApp.
