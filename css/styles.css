@@ -1,17 +1,3 @@
-  /*
-   RUEDA LIBRE · styles.css v1.0
-   Secciones:
-   1. Variables
-   2. Base
-   3. Encabezado y navegación
-   4. Componentes (portada, tarjetas, etiqueta, botones)
-   5. Tablas
-   6. Formulario
-   7. Pie y botón de WhatsApp
-   8. Accesibilidad (foco con teclado)
-  */
-
-
 /* 1. VARIABLES*/
 :root {
   /* Colores */
@@ -35,7 +21,6 @@
 
 
 /* 2. BASE*/
-/* El padding y el borde se incluyen dentro del ancho de cada elemento */
 *,
 *::before,
 *::after {
@@ -48,7 +33,7 @@ body {
   background-color: var(--crema);
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4 {
   font-family: var(--fuente-titulos);
 }
 
@@ -72,26 +57,25 @@ footer {
   display: flex;
   gap: var(--espacio-m);
   padding: 0;
-}
 
-#menu a {
+  #menu a {
   color: var(--gris-asfalto);
   text-decoration: none;
   padding: var(--espacio-s) var(--espacio-m);
   border-bottom: 3px solid transparent;
-}
+  }
 
-#menu a:hover,
-#menu a:focus {
+  #menu a:hover,
+  #menu a:focus {
   color: var(--azul-noche);
   border-bottom-color: var(--verde-ruta);
-}
+  }
 
-/* Página actual */
-#menu a.activo {
+  #menu a.activo {
   color: var(--verde-ruta);
   font-weight: 600;
   border-bottom-color: var(--verde-ruta);
+  }
 }
 
 
@@ -109,15 +93,17 @@ footer {
   border: 1px solid var(--gris-asfalto);
   border-radius: 0.5rem;
   margin-bottom: var(--espacio-l);
-}
 
-.tarjeta img {
+  .tarjeta img {
   display: block;
   width: 100%;
   height: auto;
   max-height: 15rem;
   object-fit: contain;
+  }
 }
+
+
 
 /* Etiqueta "Nuevo": anclada a la esquina superior derecha de la tarjeta,
    fuera del flujo, así no desplaza el contenido */
@@ -145,16 +131,16 @@ button {
   font-family: inherit;
   font-weight: 600;
   text-decoration: none;
-}
 
-.boton-cta:hover,
-button:hover {
+  .boton-cta:hover,
+  button:hover {
   background-color: var(--azul-noche);
-}
+  }
 
-/* El botón del formulario es más grande que el enlace "Reservar ahora" */
-button {
+  button {
   padding: var(--espacio-m) var(--espacio-xl);
+  }
+
 }
 
 
@@ -221,8 +207,6 @@ textarea {
 
 
 /* 7. PIE Y BOTÓN DE WHATSAPP */
-/* Espacio extra abajo para que el botón fijo no tape el pie
-   (el ancho y el centrado vienen de la regla de la sección 2) */
 footer {
   padding-bottom: 5rem;
 }
@@ -248,7 +232,6 @@ footer {
 
 
 /* 8. ACCESIBILIDAD (FOCO CON TECLADO) */
-/* Contorno visible al navegar con Tab */
 #menu a:focus,
 .boton-cta:focus,
 button:focus,
