@@ -46,25 +46,18 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 60rem;
-  margin: 0 auto;
-  padding: var(--espacio-m);
 }
 
 main {
-  display: flex;
-  align-items: center;
   max-width: 60rem;
   margin: 0 auto;
   padding: var(--espacio-m);
 }
 
 footer {
-  max-width: 60rem;
-  margin: 0 auto;
-  padding: var(--espacio-m);
   display:flex;
   align-items: flex-start;
+  flex-direction: row;
   gap: 20px;
 }
 
@@ -75,7 +68,7 @@ footer {
   display: flex;
   gap: var(--espacio-m);
   padding: 0;
-  flex-direction: space-evenly;
+  gap: 10px;
   flex-wrap: wrap;
 
   #menu a {
