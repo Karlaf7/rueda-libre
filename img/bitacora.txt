@@ -218,3 +218,7 @@ En esta semana construí el sitio web de Rueda Libre, un negocio de alquiler de 
 inicio, tarifas y reservas. Primero armé la estructura en HTML con etiquetas semánticas, imágenes, listas, tablas de precios y un formulario con validaciones. Luego le di estilo con CSS usando variables para los colores y las fuentes, además de un menú con estados de hover y foco. 
 En el último reto usé position para poner la etiqueta “Nuevo” en la tarjeta de bicicletas eléctricas y un botón de WhatsApp fijo en la esquina inferior derecha, y organicé el styles.css por secciones con comentarios. También revisé el sitio con DevTools para buscar errores y probé el teclado, y al final publiqué la versión 1.0 en GitHub Pages. 
 Lo que mejoraría es hacer la página adaptable para celulares, conectar el formulario para que envíe las reservas de verdad, revisar los precios con el cliente y poner el número real de WhatsApp.
+
+
+Al estrechar la ventana del navegador, pude notar que en el encabezado, el titulo y el menu de lista, se encogen, es decir, pasan a otra linea
+en el pie de pagina no vi cambios, queda excatamente igual que cuando no se estrecha la pagina

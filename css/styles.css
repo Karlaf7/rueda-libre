@@ -42,12 +42,29 @@ a {
 }
 
 /* Encabezado, contenido y pie comparten el mismo ancho y centrado */
-header,
-main,
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 60rem;
+  margin: 0 auto;
+  padding: var(--espacio-m);
+}
+
+main {
+  display: flex;
+  align-items: center;
+  max-width: 60rem;
+  margin: 0 auto;
+  padding: var(--espacio-m);
+}
+
 footer {
   max-width: 60rem;
   margin: 0 auto;
   padding: var(--espacio-m);
+  flex-direction: space-evenly;
+  align-items: flex-start;
 }
 
 
@@ -57,6 +74,8 @@ footer {
   display: flex;
   gap: var(--espacio-m);
   padding: 0;
+  flex-direction: space-evenly;
+  flex-wrap: wrap;
 
   #menu a {
   color: var(--gris-asfalto);
