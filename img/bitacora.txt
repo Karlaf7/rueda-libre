@@ -220,5 +220,5 @@ En el último reto usé position para poner la etiqueta “Nuevo” en la tarjet
 Lo que mejoraría es hacer la página adaptable para celulares, conectar el formulario para que envíe las reservas de verdad, revisar los precios con el cliente y poner el número real de WhatsApp.
 
 
-Al estrechar la ventana del navegador, pude notar que en el encabezado, el titulo y el menu de lista, se encogen, es decir, pasan a otra linea
-en el pie de pagina no vi cambios, queda excatamente igual que cuando no se estrecha la pagina
+Al estrechar la ventana del navegador, pude notar que en el encabezado, el titulo y el menu de lista, se encogen, es decir, los enlaces del menu pasan a otra linea cuando no caben
+en el pie de pagina pude notar que al estrechar la ventana, los items que no caben pasan a otra linea

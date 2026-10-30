@@ -63,8 +63,9 @@ footer {
   max-width: 60rem;
   margin: 0 auto;
   padding: var(--espacio-m);
-  flex-direction: space-evenly;
+  display:flex;
   align-items: flex-start;
+  gap: 20px;
 }
 
 
