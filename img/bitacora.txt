@@ -249,3 +249,10 @@ Solución: Dejé la base en 1 columna, 2 en el @media de 768 px y 3 en el de 120
 Problema: Las imágenes de la portada se veían recortadas.
 Soluci+on: Quité la altura fija y object-fit: cover, y usé height: auto.
 
+
+Tiempo invertido: 26 minutos
+Lineas de CSS: mi versión propia usaba 5 líneas de CSS para la distribución (grid con auto-fit y gap), más 8 líneas para alinear el contenido de las tarjetas. 
+Con Bootstrap escribí 0 líneas de CSS y usé 7 clases: container, row, g-4, col-12, col-sm-6, col-lg-4, col-xl-3.
+Lo que me dio Bootstrap sin esfuerzo: control exacto del número de columnas en cada breakpoint (1, 2, 3 y 4), gutters con una sola clase (g-4) y contenedor centrado.
+Control que perdí: Perdí flexibilidad, las columnas ya no se adaptan solas, sino solo en tamaños fijos. 
+Los botones ya no quedan alineados abajo, y el HTML quedó con más div y clases solo para el diseño.
