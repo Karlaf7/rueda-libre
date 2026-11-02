@@ -37,119 +37,131 @@
             </dl>
         </aside>
 
-        <section>
-            <h2>Formulario de reservas</h2>
-            <form action="#" method="post">
+        <section class="reservas">
+            <section>
+                <h2>Formulario de reservas</h2>
+                <form action="#" method="post">
 
-                <fieldset>
+                    <fieldset class="datos">
 
-                    <legend>Tus datos</legend>
+                        <legend>Tus datos</legend>
 
-                    <p>
-                        <label for="nombre">Nombre completo</label>
-                        <input type="text" id="nombre" name="nombre" required minlength="3">
-                    </p>
+                        <p>
+                            <label for="nombre">Nombre completo</label>
+                            <input type="text" id="nombre" name="nombre" required minlength="3">
+                        </p>
 
-                    <p>
-                        <label for="documento">Número de documento</label>
-                        <input type="text" id="documento" name="documento" required pattern="[0-9]{6,10}"
-                        title="Escribe solo números, entre 6 y 10 dígitos, sin puntos ni espacios">
-                    </p>
+                        <section class="fila-campos">
+                            <p>
+                                <label for="documento">Número de documento</label>
+                                <input type="text" id="documento" name="documento" required pattern="[0-9]{6,10}"
+                                title="Escribe solo números, entre 6 y 10 dígitos, sin puntos ni espacios">
+                            </p>
 
-                    <p>
-                        <label for="correo">Correo electrónico</label>
-                        <input type="email" id="correo" name="correo" required>
-                    </p>
+                            <p>
+                                <label for="telefono">Celular</label>
+                                <input type="tel" id="telefono" name="telefono" required pattern="3[0-9]{9}"
+                                title="10 dígitos y debe empezar por 3">
+                            </p>
+                        </section>
 
-                    <p>
-                        <label for="telefono">Celular</label>
-                        <input type="tel" id="telefono" name="telefono" required pattern="3[0-9]{9}"
-                        title="10 dígitos y debe empezar por 3">
-                    </p>
+                        <p>
+                            <label for="correo">Correo electrónico</label>
+                            <input type="email" id="correo" name="correo" required>
+                        </p>
 
-                </fieldset>
+                    </fieldset>
 
-                <fieldset>
+                    <fieldset class="alquiler">
 
-                    <legend>Tu alquiler</legend>
+                        <legend>Tu alquiler</legend>
 
-                    <p>
-                        <label for="fecha-alquiler">Fecha de alquiler</label>
-                        <input type="date" id="fecha-alquiler" name="fecha-alquiler" required min="2026-11-01" max="2026-12-31">
-                    </p>
+                        <p>
+                            <label for="fecha-alquiler">Fecha de alquiler</label>
+                            <input type="date" id="fecha-alquiler" name="fecha-alquiler" required min="2026-11-01" max="2026-12-31">
+                        </p>
                     
-                    <fieldset>
+                        <fieldset>
 
-                        <legend>Tipo de bicicleta</legend>
+                            <legend>Tipo de bicicleta</legend>
+
+                            <p>
+                                <label for="urbana">
+                                <input type="radio" id="urbana" name="bicicleta" value="urbana" required>
+                                Urbana
+                                </label>
+                            </p>
+
+                            <p>
+                                <label for="montana">
+                                <input type="radio" id="montana" name="bicicleta" value="montana" required>
+                                Montaña
+                                </label>
+                            </p>
+
+                            <p>
+                                <label for="electrica">
+                                <input type="radio" id="electrica" name="bicicleta" value="electrica" required>
+                                Eléctrica
+                                </label>
+                            </p>
+                        </fieldset>
 
                         <p>
-                            <label for="urbana">
-                            <input type="radio" id="urbana" name="bicicleta" value="urbana" required>
-                            Urbana
-                            </label>
+                            <label for="plan">Plan:</label>
+                            <select id="plan" name="plan" required>
+                                <option value="">Selecciona un plan</option>
+                                <option value="1-hora">1 hora</option>
+                                <option value="medio-dia">Medio dia</option>
+                                <option value="dia-completo">Dia completo</option>
+                            </select>
                         </p>
 
                         <p>
-                            <label for="montana">
-                            <input type="radio" id="montana" name="bicicleta" value="montana" required>
-                            Montaña
-                            </label>
+                            <label for="cantidad">Cantidad de bicicletas</label>
+                            <input type="number" id="cantidad" name="cantidad" required min="1" max="6">
                         </p>
 
                         <p>
-                            <label for="electrica">
-                            <input type="radio" id="electrica" name="bicicleta" value="electrica" required>
-                            Eléctrica
-                            </label>
+                            <label for="recorrido">Recorrido guiado:</label>
+                            <select id="recorrido" name="recorrido">
+                                <option value="">Selecciona un recorrido</option>
+                                <option value="rio-y-parques">Rio y parques</option>
+                                <option value="sabores-de-barrio">Sabores de barrio</option>
+                                <option value="reto-las-palmas">Reto las palmas</option>
+                            </select>
+
                         </p>
                     </fieldset>
 
-                    <p>
-                        <label for="plan">Plan:</label>
-                        <select id="plan" name="plan" required>
-                            <option value="">Selecciona un plan</option>
-                            <option value="1-hora">1 hora</option>
-                            <option value="medio-dia">Medio dia</option>
-                            <option value="dia-completo">Dia completo</option>
-                        </select>
-                    </p>
+                    <fieldset class="confirmacion">
+                        <legend>Confirmación</legend>
+                        <p>
+                            <label for="comentarios">Comentarios</label>
+                            <textarea id="comentarios" name="comentarios" rows="4" maxlength="300"></textarea>
+                        </p>
 
-                    <p>
-                        <label for="cantidad">Cantidad de bicicletas</label>
-                        <input type="number" id="cantidad" name="cantidad" required min="1" max="6">
-                    </p>
+                        <p>
+                            <label>
+                                <input type="checkbox" name="politicas" required>
+                                Acepto las politicas de alquiler
+                            </label>
+                        </p>
 
-                    <p>
-                        <label for="recorrido">Recorrido guiado:</label>
-                        <select id="recorrido" name="recorrido">
-                            <option value="">Selecciona un recorrido</option>
-                            <option value="rio-y-parques">Rio y parques</option>
-                            <option value="sabores-de-barrio">Sabores de barrio</option>
-                            <option value="reto-las-palmas">Reto las palmas</option>
-                        </select>
+                        <p>
+                            <button type="submit">Reservar</button>
+                        </p>
+                    </fieldset>
+                </form>
+            </section>
 
-                    </p>
-                </fieldset>
+            <aside>
+                <h2>Contacto</h2>
+                <p>Correo: <a href="mailto:ruedalibre@gmail.com">ruedalibre@gmail.com</a></p>
+                <p>WhatsApp: <a href="https://wa.me/573000000000" target="_blank" rel="noopener">Escríbenos</a></p>
+                <p>Medellín, Antioquia</p>
+            </aside>
 
-                <fieldset>
-                    <legend>Confirmación</legend>
-                    <p>
-                        <label for="comentarios">Comentarios</label>
-                        <textarea id="comentarios" name="comentarios" rows="4" maxlength="300"></textarea>
-                    </p>
-
-                    <p>
-                        <label>
-                            <input type="checkbox" name="politicas" required>
-                            Acepto las politicas de alquiler
-                        </label>
-                    </p>
-
-                    <p>
-                        <button type="submit">Reservar</button>
-                    </p>
-                </fieldset>
-            </form>
         </section>
 
     </main>
