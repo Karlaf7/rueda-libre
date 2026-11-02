@@ -223,10 +223,12 @@ Lo que mejoraría es hacer la página adaptable para celulares, conectar el form
 Al estrechar la ventana del navegador, pude notar que en el encabezado, el titulo y el menu de lista, se encogen, es decir, los enlaces del menu pasan a otra linea cuando no caben y el titulo y el menu quedan pegados
 en el pie de pagina pude notar que al estrechar la ventana, los items que no caben pasan a otra linea
 
+
 Con el modo dispositivo de DevTools:
 1280 px: se ven 7 columnas perfectamente
 900 px: se ven 7 columnas, pero en las ultimas dos, el enlace reservar no se
 500 px: se ven dos perfectamente, y el titulo de otra
+
 
 Casos:
 Portada: utilicé Grid, porque necesitaba dos columnas (texto e imagen) con unidades fr y el texto centrado verticalmente. Grid reparte el ancho en columnas y align-items: center centra el contenido en su fila.
@@ -235,6 +237,7 @@ Reservas: utilicé Grid, porque Pedían una proporción 2:1. grid-template-colum
 Fila del formulario: utilicé Flexbox, porque Solo debía poner dos campos cortos uno al lado del otro, es decir, una única fila. Con display: flex, gap y flex: 1 cada campo ocupa la mitad.
 Encabezado: Utilicé Flexbox,porque el título y el menú van en una sola fila. justify-content: space-between separa el título a un extremo y el menú al otro, y align-items: center los centra verticalmente entre sí.
 Pie: Utilicé Flexbox,porque los textos del pie (proyecto, correo, año) van uno al lado del otro en una sola fila (flex-direction: row). gap: 20px los separa y align-items: flex-start los alinea por la parte de arriba. Además, max-width y margin: 0 auto centran el bloque en la página.
+
 
 
 360: 
@@ -257,9 +260,26 @@ Lo que me dio Bootstrap sin esfuerzo: control exacto del número de columnas en 
 Control que perdí: Perdí flexibilidad, las columnas ya no se adaptan solas, sino solo en tamaños fijos. 
 Los botones ya no quedan alineados abajo, y el HTML quedó con más div y clases solo para el diseño.
 
+
 Cinco clases encontradas y que hacen:
 container: Organiza el contenido de la página y establece un ancho adecuado para que no ocupe toda la pantalla.
 py-5: Agrega espacio interno en la parte superior e inferior de una sección.
 row: Organiza las columnas dentro de una fila, permitiendo distribuir el contenido.
 col-12: Hace que el elemento ocupe las 12 columnas disponibles, es decir, todo el ancho en pantallas pequeñas.
 text-center: Centra el texto horizontalmente dentro de su elemento.
+
+
+Conflicto 1: Color del enlace (mi CSS contra Bootstrap)
+Qué vi en DevTools: En un <a>, la regla color: rgba(var(--bs-link-color-rgb)...) de _reboot.scss:245 (Bootstrap) aparece tachada. La que se aplica es color: var(--verde-ruta) de styles.css:40.
+Por qué pasaba: Bootstrap y mi CSS definen el color de a con el mismo selector, y gana el que se carga después. Mi styles.css va después de Bootstrap, así que mi color gana y el de Bootstrap queda tachado.
+Cómo lo solucioné: Dejé styles.css cargado después de Bootstrap en el <head>, y además cambié la variable de Bootstrap para que su color por defecto sea el mío:
+
+Conflicto 2: box-sizing: border-box repetido
+Qué vi en DevTools: La regla *, ::after, ::before { box-sizing: border-box; } de _reboot.scss:19 (Bootstrap) aparece tachada. Se aplica la de styles.css:26.
+Por qué pasaba: Escribí lo mismo que Bootstrap ya trae. Como mi archivo va después, mi regla gana y la de Bootstrap queda tachada.
+Cómo lo solucioné: Eliminé de mi CSS el bloque *, *::before, *::after { box-sizing: border-box; }, porque Bootstrap ya lo incluye.
+
+Conflicto 3: Estilo por defecto del navegador contra Bootstrap
+Qué vi en DevTools: En la regla a:-webkit-any-link (user agent stylesheet, es decir, el estilo que trae el navegador), color: -webkit-link y text-decoration: underline aparecen tachados. cursor: pointer sigue activo.
+Por qué pasaba: Los navegadores ponen a los enlaces un color azul y un subrayado por defecto. Bootstrap redefine el color y el subrayado (_reboot.scss:245), y por eso la regla del navegador queda tachada. Mi CSS luego sobrescribe el color de Bootstrap (conflicto 1).
+Cómo lo solucioné: No necesité cambiar nada. El orden de prioridad es: navegador, luego Bootstrap, luego mi CSS. El subrayado de Bootstrap sigue activo en los enlaces del contenido. En el menú lo quité con #menu a { text-decoration: none; }.
