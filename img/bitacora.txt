@@ -256,3 +256,10 @@ Con Bootstrap escribí 0 líneas de CSS y usé 7 clases: container, row, g-4, co
 Lo que me dio Bootstrap sin esfuerzo: control exacto del número de columnas en cada breakpoint (1, 2, 3 y 4), gutters con una sola clase (g-4) y contenedor centrado.
 Control que perdí: Perdí flexibilidad, las columnas ya no se adaptan solas, sino solo en tamaños fijos. 
 Los botones ya no quedan alineados abajo, y el HTML quedó con más div y clases solo para el diseño.
+
+Cinco clases encontradas y que hacen:
+container: Organiza el contenido de la página y establece un ancho adecuado para que no ocupe toda la pantalla.
+py-5: Agrega espacio interno en la parte superior e inferior de una sección.
+row: Organiza las columnas dentro de una fila, permitiendo distribuir el contenido.
+col-12: Hace que el elemento ocupe las 12 columnas disponibles, es decir, todo el ancho en pantallas pequeñas.
+text-center: Centra el texto horizontalmente dentro de su elemento.
