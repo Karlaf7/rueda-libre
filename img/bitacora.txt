@@ -222,3 +222,8 @@ Lo que mejoraría es hacer la página adaptable para celulares, conectar el form
 
 Al estrechar la ventana del navegador, pude notar que en el encabezado, el titulo y el menu de lista, se encogen, es decir, los enlaces del menu pasan a otra linea cuando no caben y el titulo y el menu quedan pegados
 en el pie de pagina pude notar que al estrechar la ventana, los items que no caben pasan a otra linea
+
+Con el modo dispositivo de DevTools:
+1280 px: se ven 7 columnas perfectamente
+900 px: se ven 7 columnas, pero en las ultimas dos, el enlace reservar no se
+500 px: se ven dos perfectamente, y el titulo de otra

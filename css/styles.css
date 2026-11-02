@@ -59,6 +59,9 @@ footer {
   align-items: flex-start;
   flex-direction: row;
   gap: 20px;
+  max-width: 60rem;
+  margin: 0 auto;
+  padding: var(--espacio-m);
 }
 
 
@@ -66,54 +69,67 @@ footer {
 #menu {
   list-style: none;
   display: flex;
-  gap: var(--espacio-m);
   padding: 0;
   gap: 10px;
   flex-wrap: wrap;
+}
 
-  #menu a {
+#menu a {
+  display: block;
   color: var(--gris-asfalto);
-  text-decoration: none;
   padding: var(--espacio-s) var(--espacio-m);
-  border-bottom: 3px solid transparent;
-  }
+  text-decoration: none;
+}
 
-  #menu a:hover,
-  #menu a:focus {
+#menu a:hover,
+#menu a:focus {
   color: var(--azul-noche);
-  border-bottom-color: var(--verde-ruta);
-  }
+  background-color: var(--verde-ruta);
+}
 
-  #menu a.activo {
-  color: var(--verde-ruta);
+#menu a:focus {
+  outline: 3px solid var(--azul-noche);
+  outline-offset: 2px;
+}
+
+#menu a.activo {
+  color: var(--blanco);
   font-weight: 600;
-  border-bottom-color: var(--verde-ruta);
-  }
+  background-color: var(--verde-ruta);
 }
 
 
 /*4. COMPONENTES */
-
-/* Portada */
-.portada {
-  min-height: 20vh;
-}
 
 /* Tarjeta: es el punto de referencia para la etiqueta "Nuevo" */
 .tarjeta {
   position: relative;
   padding: var(--espacio-m);
   border: 1px solid var(--gris-asfalto);
-  border-radius: 0.5rem;
   margin-bottom: var(--espacio-l);
 
-  .tarjeta img {
-  display: block;
+.tarjeta img {
   width: 100%;
   height: auto;
   max-height: 15rem;
   object-fit: contain;
   }
+}
+
+.nuestra-flota {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.nuestra-flota article {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.nuestra-flota article a{
+  margin-top: auto;
 }
 
 
@@ -127,7 +143,6 @@ footer {
   background-color: var(--naranja-pedal);
   color: var(--azul-noche);
   font-family: var(--fuente-titulos);
-  font-size: 0.8rem;
   padding: 0.25rem var(--espacio-s);
   border-radius: 0.25rem;
 }
@@ -144,17 +159,19 @@ button {
   font-family: inherit;
   font-weight: 600;
   text-decoration: none;
-
-  .boton-cta:hover,
-  button:hover {
-  background-color: var(--azul-noche);
-  }
-
-  button {
-  padding: var(--espacio-m) var(--espacio-xl);
-  }
-
 }
+.boton-cta:hover,
+button:hover {
+  background-color: var(--azul-noche);
+}
+
+.boton-cta:focus,
+button:focus {
+  outline: 3px solid var(--azul-noche);
+  outline-offset: 2px;
+}
+
+
 
 
 /* 5. TABLAS */
@@ -201,9 +218,19 @@ textarea {
 }
 
 input:hover,
+input:focus,
 select:hover,
-textarea:hover {
+select:focus,
+textarea:hover,
+textarea:focus {
   border-color: var(--verde-ruta);
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 3px solid var(--azul-noche);
+  outline-offset: 2px;
 }
 
 /* Campos de ancho completo */
@@ -218,40 +245,27 @@ textarea {
   padding: var(--espacio-s);
 }
 
-
-/* 7. PIE Y BOTÓN DE WHATSAPP */
-footer {
-  padding-bottom: 5rem;
-}
-
 /* Botón fijo en la esquina inferior derecha, visible al hacer scroll */
 .whatsapp-fijo {
   position: fixed;
   right: var(--espacio-m);
   bottom: var(--espacio-m);
   z-index: 100;
-  background-color: #128C4A;
+  background-color: var(--verde-ruta);
   color: var(--blanco);
   font-weight: 600;
   text-decoration: none;
   padding: var(--espacio-s) var(--espacio-m);
   border-radius: 2rem;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
 }
 
 .whatsapp-fijo:hover {
   background-color: var(--azul-noche);
 }
 
-
-/* 8. ACCESIBILIDAD (FOCO CON TECLADO) */
-#menu a:focus,
-.boton-cta:focus,
-button:focus,
-input:focus,
-select:focus,
-textarea:focus,
 .whatsapp-fijo:focus {
   outline: 3px solid var(--azul-noche);
   outline-offset: 2px;
 }
+
+
