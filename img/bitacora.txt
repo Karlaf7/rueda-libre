@@ -283,3 +283,22 @@ Conflicto 3: Estilo por defecto del navegador contra Bootstrap
 Qué vi en DevTools: En la regla a:-webkit-any-link (user agent stylesheet, es decir, el estilo que trae el navegador), color: -webkit-link y text-decoration: underline aparecen tachados. cursor: pointer sigue activo.
 Por qué pasaba: Los navegadores ponen a los enlaces un color azul y un subrayado por defecto. Bootstrap redefine el color y el subrayado (_reboot.scss:245), y por eso la regla del navegador queda tachada. Mi CSS luego sobrescribe el color de Bootstrap (conflicto 1).
 Cómo lo solucioné: No necesité cambiar nada. El orden de prioridad es: navegador, luego Bootstrap, luego mi CSS. El subrayado de Bootstrap sigue activo en los enlaces del contenido. En el menú lo quité con #menu a { text-decoration: none; }.
+
+
+Tiempo invertido en cada versión:
+Versión v1.5 = 2 días
+Version v2.0-beta = 6 horas
+
+Ventajas y desventajas:
+
+Ventajas: Las paginas de Reservas y Tarifas ahora tienen una estructura más parecida, lo que hace que el diseño sea más ordenado. 
+En celulares se muestra una sola columna y en pantallas más grandes se muestran dos. Además, se puede ver fácilmente el espacio que ocupa cada sección. 
+Reservas ahora se adapta mejor a pantallas medianas y los campos se distribuyen automáticamente en dos columnas, sin necesidad de usar flex: 1.
+
+Desventajas: Se tuvieron que agregar más contenedores y nombres de clases en el HTML. 
+Si se escribe mal el nombre de una clase, el diseño puede dejar de funcionar. Además, el CSS aumentó un poco y en la sección de Tarifas, cuando la pantalla tiene un tamaño mediano, el contenido puede verse muy ajustado.
+
+Conclusión: Cambiar de Flexbox a Grid en los formularios y organizar el diseño en 12 columnas permitió que la página quedara más ordenada y fuera más fácil de adaptar a diferentes tamaños de pantalla. 
+Sin embargo, fue necesario agregar más elementos al HTML y algunas líneas de CSS. Grid funciona mejor para organizar contenidos en dos columnas, mientras que Flexbox sigue siendo más útil para elementos en una sola fila o columna, como el encabezado, el menú y el pie de página.
+
+
