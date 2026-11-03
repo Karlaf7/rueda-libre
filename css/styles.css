@@ -131,13 +131,16 @@ img {
 
 /*usado por reservas*/
 .fila-campos {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr;
   gap: 1rem;
 }
 
-.fila-campos p {
-  flex: 1;
+.tarifas {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--espacio-l);
+  align-items: start;
 }
 
 /* Etiqueta "Nuevo": anclada a la esquina superior derecha de la tarjeta,
@@ -290,7 +293,7 @@ textarea {
   }
 
   .fila-campos {
-    flex-direction: row;
+    grid-template-columns: repeat(2, 1fr);
   }
 
   table {
@@ -300,11 +303,18 @@ textarea {
   th, td {
     padding: 0.75rem 1rem;
   }
-}
+
+  .reservas {
+  grid-template-columns: repeat(12, 1fr);
+  }
+  .reservas-form     { 
+  grid-column: span 8; }
+  .reservas-contacto { 
+  grid-column: span 4; }
+  
+  }
 
 @media (min-width: 1200px) {
 
-  .reservas {
-    grid-template-columns: 2fr 1fr;
-  }
+  .tarifas  { grid-template-columns: 2fr 1fr; }
 }
