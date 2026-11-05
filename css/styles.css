@@ -121,6 +121,102 @@ img {
   height: auto;
 }
 
+.portada {
+  min-height: 20vh;
+}
+
+.portada-imagen {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+
+.nuestra-flota {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.nuestra-flota header {
+  grid-column: 1 / -1;
+  text-align: center;
+}
+
+.nuestra-flota article {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: auto;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.nuestra-flota img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: contain;
+}
+
+.nuestras-rutas {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+  align-items: stretch;
+}
+
+.nuestras-rutas article {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: auto;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.nuestras-rutas header {
+  grid-column: 1 / -1;
+  text-align: center;
+}
+
+
+.nuestras-rutas img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.beneficios {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.beneficios article {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: auto;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.beneficios header {
+  grid-column: 1 / -1;
+  text-align: center;
+}
+
 /*usado por reservas*/
 .reservas {
   display: grid;
