@@ -9,14 +9,17 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
-    <header>
-        <h1>Rueda libre</h1>
-        <img src="../img/logo.png" alt="Logo Rueda Libre" width="120">
+    <header class="d-flex justify-content-between align-items-center px-4 py-3">
+        <div class="d-flex align-items-center gap-3">
+            <h1 class="h3 m-0">Rueda libre</h1>
+            <img src="../img/logo.png" alt="Logo Rueda Libre" width="120">
+        </div>
         <nav>
-            <ul id="menu">
+            <ul id="menu" class="d-flex gap-3 list-unstyled m-0">
                 <li><a href="../index.html">Inicio</a></li>
                 <li><a href="tarifas.html">Tarifa y Rutas</a></li>
                 <li><a href="reservas.html" class="activo" aria-current="page">Reservas</a></li>
@@ -24,11 +27,11 @@
         </nav>
     </header>
 
-    <main>
+    <main class="container py-4">
         <h2>Reserva tu bicicleta</h2>
         <p>Correo de contacto:<a href="mailto:ruedalibre@gmail.com"> Escríbenos a nuestro correo para reservar tu bicicleta</a></p>
 
-        <aside>
+        <aside class="mb-4"> 
             <h2>Horario de atención</h2>
             <dl>
                 <dt>Lunes a Viernes</dt>
@@ -38,8 +41,8 @@
             </dl>
         </aside>
 
-        <section class="reservas">
-            <section class="reservas-form">
+        <section class="row g-4">
+            <section class="reservas-form col-12 col-md-8"> 
                 <h2>Formulario de reservas</h2>
                 <form action="#" method="post">
 
@@ -108,21 +111,23 @@
                             </p>
                         </fieldset>
 
-                        <section class="fila-campos">
-                            <p>
-                                <label for="plan">Plan:</label>
-                                <select id="plan" name="plan" required>
-                                    <option value="">Selecciona un plan</option>
-                                    <option value="1-hora">1 hora</option>
-                                    <option value="medio-dia">Medio dia</option>
-                                    <option value="dia-completo">Dia completo</option>
-                                </select>
-                            </p>
+                        <section class="row g-3">
+                            <section class="fila-campos">
+                                <p class="col-12 col-lg-6">
+                                    <label for="plan">Plan:</label>
+                                    <select id="plan" name="plan" required>
+                                        <option value="">Selecciona un plan</option>
+                                        <option value="1-hora">1 hora</option>
+                                        <option value="medio-dia">Medio dia</option>
+                                        <option value="dia-completo">Dia completo</option>
+                                    </select>
+                                </p>
 
-                            <p>
-                                <label for="cantidad">Cantidad de bicicletas</label>
-                                <input type="number" id="cantidad" name="cantidad" required min="1" max="6">
-                            </p>
+                                <p class="col-12 col-lg-6">
+                                    <label for="cantidad">Cantidad de bicicletas</label>
+                                    <input type="number" id="cantidad" name="cantidad" required min="1" max="6">
+                                </p>
+                            </section>
                         </section>
 
                         <p>
@@ -158,7 +163,7 @@
                 </form>
             </section>
 
-            <aside class="reservas-contacto">
+            <aside class="reservas-contacto col-12 col-md-4">
                 <h2>Contacto</h2>
                 <p>Correo: <a href="mailto:ruedalibre@gmail.com">ruedalibre@gmail.com</a></p>
                 <p>WhatsApp: <a href="https://wa.me/573000000000" target="_blank" rel="noopener">Escríbenos</a></p>
@@ -177,6 +182,8 @@
     </footer>
 
     <a href="https://wa.me/573000000000" class="whatsapp-fijo" target="_blank" rel="noopener">WhatsApp</a>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 
 </body>
 </html>

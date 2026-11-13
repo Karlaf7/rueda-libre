@@ -185,7 +185,7 @@ Botones principales: Fondo Verde Ruta, texto blanco, relacion: 5.31:1
 Botones secundarios y destacados: Fondo Naranja Pedal, texto Azul Noche, relacion: 7.2:1
 Enlaces: Verde Ruta sobre Crema, subrayados, relacion: 4.93:1
 
-Enlace: https://karlaf7.github.io/rueda-libre/
+Enlace de GitHub: https://karlaf7.github.io/rueda-libre/
 
 
 Comprobación de herencia en DevTools:
@@ -213,7 +213,7 @@ la tarjeta se hacía más ancha que lo declarado. Con border-box, el ancho total
 porque el ancho ya incluye relleno y borde.
 
 
-Resumen:
+Resumen de la primera semana:
 En esta semana construí el sitio web de Rueda Libre, un negocio de alquiler de bicicletas en Medellín, con tres páginas: 
 inicio, tarifas y reservas. Primero armé la estructura en HTML con etiquetas semánticas, imágenes, listas, tablas de precios y un formulario con validaciones. Luego le di estilo con CSS usando variables para los colores y las fuentes, además de un menú con estados de hover y foco. 
 En el último reto usé position para poner la etiqueta “Nuevo” en la tarjeta de bicicletas eléctricas y un botón de WhatsApp fijo en la esquina inferior derecha, y organicé el styles.css por secciones con comentarios. También revisé el sitio con DevTools para buscar errores y probé el teclado, y al final publiqué la versión 1.0 en GitHub Pages. 
@@ -239,7 +239,7 @@ Encabezado: Utilicé Flexbox,porque el título y el menú van en una sola fila. 
 Pie: Utilicé Flexbox,porque los textos del pie (proyecto, correo, año) van uno al lado del otro en una sola fila (flex-direction: row). gap: 20px los separa y align-items: flex-start los alinea por la parte de arriba. Además, max-width y margin: 0 auto centran el bloque en la página.
 
 
-
+Visualizar la pagina en diferentes tamaños:
 360: 
 problema: La imagen grande de la portada se salía de su columna y el menú del encabezado quedaba cortado.
 Solución: Puse width: 100%, max-width: 100% y height: auto a la imagen, y flex-wrap: wrap al encabezado.
@@ -261,14 +261,14 @@ Control que perdí: Perdí flexibilidad, las columnas ya no se adaptan solas, si
 Los botones ya no quedan alineados abajo, y el HTML quedó con más div y clases solo para el diseño.
 
 
-Cinco clases encontradas y que hacen:
+Cinco clases encontradas en la documentación y que hacen:
 container: Organiza el contenido de la página y establece un ancho adecuado para que no ocupe toda la pantalla.
 py-5: Agrega espacio interno en la parte superior e inferior de una sección.
 row: Organiza las columnas dentro de una fila, permitiendo distribuir el contenido.
 col-12: Hace que el elemento ocupe las 12 columnas disponibles, es decir, todo el ancho en pantallas pequeñas.
 text-center: Centra el texto horizontalmente dentro de su elemento.
 
-
+Identifica con DevTools los conflictos entre tus estilos y los de Bootstrap
 Conflicto 1: Color del enlace (mi CSS contra Bootstrap)
 Qué vi en DevTools: En un <a>, la regla color: rgba(var(--bs-link-color-rgb)...) de _reboot.scss:245 (Bootstrap) aparece tachada. La que se aplica es color: var(--verde-ruta) de styles.css:40.
 Por qué pasaba: Bootstrap y mi CSS definen el color de a con el mismo selector, y gana el que se carga después. Mi styles.css va después de Bootstrap, así que mi color gana y el de Bootstrap queda tachado.
